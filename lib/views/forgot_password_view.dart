@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mynotes/services/auth/bloc/auth_bloc.dart';
 import 'package:mynotes/services/auth/bloc/auth_event.dart';
@@ -36,11 +35,17 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
         if (state is AuthStateForgotPassword) {
           if (state.hasSentEmail) {
             _controller.clear();
+            if (!context.mounted) return;
             await showPasswordResetSentDialog(context);
           }
           if (state.exception != null) {
-            await showErrorDialog(context,
-                'We could not process your request. Please make sure that you are a registered user, or if not, register as a new user by going back one step.');
+            if (!context.mounted) return;
+            await showErrorDialog(
+              context,
+              'We could not process your request. '
+              'Please make sure that you are a registered user. '
+              'If not, register as a new user by going back one step.',
+            );
           }
         }
       },
