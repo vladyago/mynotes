@@ -1,16 +1,17 @@
-# mynotes
+# My Flutter Notes
 
-A new Flutter project.
+A simple note taking app developed in Flutter that securely stores your notes in the cloud.
+
+## Introduction
+
+This project attempts to create a simple note taking app where you can quickly store basic text notes. The notes get stored securely in the cloud and will sync to the app on all you devices.
+
+The app utilizes Firebase for user authentication and cloud storage of the notes.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This app is now available on the Apple App Store and Google Play Store. Download and try it out now!
+- [Apple App Store](https://apps.apple.com/us/app/my-flutter-notes/id1670042580)
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.vladyago.mynotes)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To get started on using the app, just register for a new account with you email, complete email verification and you should be ready to go!
